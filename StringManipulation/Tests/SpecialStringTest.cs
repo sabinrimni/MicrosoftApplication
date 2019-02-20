@@ -26,7 +26,7 @@ namespace StringManipulation.Tests
         }
 
         [Test]
-        public void InputIsNull()
+        public void TestNullOperations()
         {
             SpecialString s1 = null, s2 = null;
             Assert.That(() => s1==s2, Throws.InvalidOperationException);
@@ -36,7 +36,7 @@ namespace StringManipulation.Tests
         }
 
         [Test]
-        public void TestShiftOperation()
+        public void TestShiftOperations()
         {
             SpecialString s = "Microsoft";
 
@@ -83,6 +83,8 @@ namespace StringManipulation.Tests
             Assert.That(s.ToString(), Is.EqualTo("Microsoft"));
             s = "RandomString";
             Assert.That(s.ToString(), Is.EqualTo("RandomString"));
+            s = "1";
+            Assert.That(s.ToString(), Is.EqualTo("1"));
         }
     }
 }
